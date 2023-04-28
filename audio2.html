@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+	<title>Learn Portuguese</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1 style="font-size: 3rem; color: #cc822e"><b><u><centre>Learning made simple with us</centre></b></h1></u></h1>
+	<p style="font-size: 1rem; color: #d81212"><i><u>check out some portuguese audio down here!!</u></i></p>
+	
+	<h2>1.Mam'am - senhora</h2>
+	<audio controls>
+		<source src="audio1.mp3" type="audio/mpeg">
+		<source src="audio1.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<h2>2.Car - carro</h2>
+	<audio controls>
+		<source src="audio2.mp3" type="audio/mpeg">
+		<source src="audio2.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<h2>3.Near - perto</h2>
+	<audio controls>
+		<source src="audio3.mp3" type="audio/mpeg">
+		<source src="audio3.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+
+    <h2>4.Pardon me - perdao</h2>
+	<audio controls>
+		<source src="audio4.mp3" type="audio/mpeg">
+		<source src="audio4.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	
+    <h2>5.please - por fabor</h2>
+	<audio controls>
+		<source src="audio5.mp3" type="audio/mpeg">
+		<source src="audio5.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+
+
+	
+    <h2>6.Bye - tchau</h2>
+	<audio controls>
+		<source src="audio6.mp3" type="audio/mpeg">
+		<source src="audio6.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<h2>7.Thank You - obrigada/o</h2>
+	<audio controls>
+		<source src="audio7.mp3" type="audio/mpeg">
+		<source src="audio7.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<h2>8.Good Night - boa noite</h2>
+	<audio controls>
+		<source src="audio8.mp3" type="audio/mpeg">
+		<source src="audio8.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<h2>9.Good Evening - boa noite</h2>
+	<audio controls>
+		<source src="audio8.mp3" type="audio/mpeg">
+		<source src="audio8.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<h2>10.Yes - sim</h2>
+	<audio controls>
+		<source src="audio10.mp3" type="audio/mpeg">
+		<source src="audio10.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+
+	
+
+	 <!-- Input area -->
+	 <label for="Speech Recognition"><label style="font-size: 2rem; color: #6b2ecc"><centre><b>Speech Recognition</centre></b></label>
+	 <centre><input type="text" name="" id="speechToText" placeholder="Speak Something" onclick="record()"></centre>
+ 
+	 <!-- Below is the script for voice recognition and conversion to text-->
+	 <script>
+		 function record() {
+			 var recognition = new webkitSpeechRecognition();
+			 recognition.lang = "en-GB";
+ 
+			 recognition.onresult = function(event) {
+				 // console.log(event);
+				 document.getElementById('speechToText').value = event.results[0][0].transcript;
+			 }
+			 recognition.start();
+ 
+		 }
+	 </script>
+
+
+
+</body>
+</html>
